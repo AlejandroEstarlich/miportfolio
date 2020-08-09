@@ -2,7 +2,6 @@
 
 var express = require('express');
 var ArticleController = require('../controllers/article');
-var ContactoController = require('../controllers/message');
 
 var router = express.Router();
 
