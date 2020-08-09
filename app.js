@@ -33,7 +33,6 @@ app.use((req, res, next) => {
 });
 
 // Añadir prefijos a rutas / Cargar rutas
-app.use('/', express.static('client', {redirect: false})); 
 app.use('/api/', article_routes);
 app.use('/api/', user_routes);
 
