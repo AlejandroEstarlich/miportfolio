@@ -236,14 +236,14 @@ var controller = {
 
 		// Conseguir nombre y extensión de archivo
 		var file_path = req.files.file0.path;
-		var file_split = file_path.split('//');
+		var file_split = file_path.split('/');
 
 		// ADVERTENCIA: EN LINUS O MAC
 		//var file_split = file_path.split('/');
 
 		// Nombre del archivo
 		var file_name = file_split[2];
-
+		console.log(file_name);
 		// Extensión del archivo
 		var extension_split = file_name.split('/.');
 		var file_ext = extension_split[1];
