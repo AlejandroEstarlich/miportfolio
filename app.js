@@ -33,13 +33,8 @@ app.use((req, res, next) => {
 });
 
 // Añadir prefijos a rutas / Cargar rutas
-app.use('/', express.static('client', {redirect: false})); 
 app.use('/api/', article_routes);
 app.use('/api/', user_routes);
-
-app.get('*', function(req, res, next){
-	res.sendFile(path.resolve('client/index.html'));
-});
 
 // Exportar módulo (fichero actual)
 module.exports = app;
