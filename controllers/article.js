@@ -24,8 +24,6 @@ var controller = {
 	save: (req, res) => {
 		// Recoger los parámetros por post
 		var params = req.body;
-		console.log(params);
-		alert(params);
 
 		// Validar datos (validator)
 		try{
