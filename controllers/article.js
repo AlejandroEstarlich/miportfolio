@@ -245,8 +245,9 @@ var controller = {
 		var file_name = file_split[2];
 		console.log(file_name);
 		// Extensión del archivo
-		var extension_split = file_name.split('/.');
+		var extension_split = file_name.split('\.');
 		var file_ext = extension_split[1];
+
 
 		// Comprobar la extensión, solo imagenes, si no es valida, borrar el fichero
 
@@ -258,6 +259,7 @@ var controller = {
 					message: 'La extensión de archivo no es válida.'
 				});
 			});
+			console.log("Extensión no válida");
 		} else {
 			// Si todo es válido, buscar el articulo, asignarle un nombre de la imagen y actualizarlo
 			//Sacamos el id de la url
@@ -269,13 +271,15 @@ var controller = {
 						return res.status(200).send({
 							status: 'error',
 							article: 'Error al guardar la imagen.'
-						});					
+						});
+						console.log("Error al guardar la imagen");					
 					}
 
 					return res.status(200).send({
 						status: 'success',
 						article: articleUpdated
 					});
+					console.log("imagen subida con éxito");
 				});				
 			} else {
 				return res.status(200).send({
